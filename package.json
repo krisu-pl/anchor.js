@@ -1,6 +1,6 @@
 {
   "name": "@anchor-protocol/anchor.js",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "author": "Anchor Protocol",
   "license": "MIT",
   "repository": "github:Anchor-Protocol/anchor.js",
@@ -12,7 +12,6 @@
   "files": [
     "dist"
   ],
-  "install": "npm run build",
   "scripts": {
     "build": "tsc --module commonjs",
     "test": "jest",
@@ -22,7 +21,7 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "prepublishOnly": "npm run build",
     "integration-test": "ts-node ./integration-test/index.ts",
-    "prepare": "husky install"
+    "prepare": "npm run build"
   },
   "lint-staged": {
     "**/src/{**/*,*}.{ts,tsx}": [
