@@ -30,7 +30,7 @@ import {
   fabricateRedeemCollateral,
   fabricateLiquidationQueueSubmitBid,
   fabricateLiquidationQueueRetractBid,
-  fabricateLiquidationQueueActiveBids,
+  fabricateLiquidationQueueActivateBids,
   fabricateLiquidationQueueClaimLiquidation,
   Pair,
 } from '../fabricators';
@@ -688,7 +688,7 @@ describe('Money Market', () => {
     it('active-bids', async () => {
       testFabricator(
         expect,
-        fabricateLiquidationQueueActiveBids,
+        fabricateLiquidationQueueActivateBids,
         {
           address: 'address',
           bids_idx: undefined,

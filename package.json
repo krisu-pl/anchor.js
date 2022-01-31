@@ -12,6 +12,7 @@
   "files": [
     "dist"
   ],
+  "install": "npm run build",
   "scripts": {
     "build": "tsc --module commonjs",
     "test": "jest",
