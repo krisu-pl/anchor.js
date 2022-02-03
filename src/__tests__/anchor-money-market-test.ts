@@ -31,7 +31,7 @@ import {
   fabricateLiquidationQueueSubmitBid,
   fabricateLiquidationQueueRetractBid,
   fabricateLiquidationQueueActivateBids,
-  fabricateLiquidationQueueClaimLiquidation,
+  fabricateLiquidationQueueClaimLiquidations,
   Pair,
 } from '../fabricators';
 import { COLLATERAL_DENOMS, MARKET_DENOMS } from '../address-provider';
@@ -713,7 +713,7 @@ describe('Money Market', () => {
     it('active-bids', async () => {
       testFabricator(
         expect,
-        fabricateLiquidationQueueClaimLiquidation,
+        fabricateLiquidationQueueClaimLiquidations,
         {
           address: 'address',
           bids_idx: undefined,

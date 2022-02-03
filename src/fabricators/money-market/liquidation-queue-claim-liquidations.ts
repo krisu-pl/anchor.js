@@ -9,7 +9,7 @@ interface Option {
   bids_idx: string[] | undefined;
 }
 
-export const fabricateLiquidationQueueClaimLiquidation =
+export const fabricateLiquidationQueueClaimLiquidations =
   ({ address, bids_idx, collateral_token }: Option) =>
   (addressProvider: AddressProvider): MsgExecuteContract[] => {
     validateInput([validateAddress(address)]);
@@ -18,7 +18,7 @@ export const fabricateLiquidationQueueClaimLiquidation =
 
     return [
       new MsgExecuteContract(address, mmContractAddress, {
-        claim_liquidation: {
+        claim_liquidations: {
           collateral_token: collateral_token,
           bids_idx: bids_idx,
         },
