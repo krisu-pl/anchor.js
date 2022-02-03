@@ -700,7 +700,7 @@ describe('Money Market', () => {
             'address',
             addressProvider.liquidationQueue(),
             {
-              active_bids: {
+              activate_bids: {
                 bids_idx: undefined,
                 collateral_token: bAsset.token(),
               },
@@ -725,7 +725,7 @@ describe('Money Market', () => {
             'address',
             addressProvider.liquidationQueue(),
             {
-              claim_liquidation: {
+              claim_liquidations: {
                 bids_idx: undefined,
                 collateral_token: bAsset.token(),
               },
